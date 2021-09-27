@@ -5,11 +5,11 @@ const textArea = document.querySelector("#output");
 
 function gettingValue() {
   if (birthdate.value.length == 0 && luckyNumber.value.length == 0) {
-    textArea.value = "Please enter both the input field to proceed";
+    textArea.innerText = "Please enter both the input field to proceed";
   } else if (birthdate.value.length == 0) {
-    textArea.value = "Enter your date of birth";
+    textArea.innerText = "Enter your date of birth";
   } else if (luckyNumber.value.length == 0) {
-    textArea.value = "Enter the lucky number";
+    textArea.innerText = "Enter the lucky number";
   } else {
     processing();
   }
@@ -27,9 +27,9 @@ function lastProcess(value) {
     addUp += Number(value.charAt(i));
   }
   if (addUp % luckyNumber.value == 0) {
-    textArea.value = "congrats your birthday is lucky";
+    textArea.innerText = "congrats your birthday is lucky!! 🥳";
   } else {
-    textArea.value = "sorry your birthday is not lucky";
+    textArea.innerText = "sorry your birthday is not lucky 😔";
   }
 }
 
